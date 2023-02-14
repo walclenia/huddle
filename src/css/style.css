@@ -1,0 +1,184 @@
+body{
+    background-color: #ffffff;
+    font-weight: 400; 
+    max-width: 1440px;
+    height: auto;
+}
+.main{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    background-color: hsl(257, 40%, 49%);
+    background-image: url('../image/bgdesktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid: "header"
+          "about"
+          "about"
+          "rodape" ; 
+}
+
+.container .header{
+    grid-area: header;
+}
+
+.container .header .logo{
+    max-width: 230px;
+    margin-top: 20px;
+    padding-left: 50px;
+}
+
+.container .about{
+    grid-area: about;
+    display: flex;
+    color: white;   
+    margin: 0 30px;
+}
+
+.container .about .image{
+    max-width: 700px;
+    padding: 18PX 20px;
+}
+
+.container .about .information{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;    
+    margin-top: 70px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container .about .information .title{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 50px;
+    width: 350px;
+}
+
+.container .about .information .description{
+    width: 460px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 15px;
+}
+
+.advice-update{
+    background-color: white;
+    font-size: 16px;
+    border-radius: 50px;
+    border: none;
+    height: 50px;
+    width: 180px;
+    color: hsl(257, 40%, 49%);
+    margin-top: 30px;     
+    cursor: pointer;   
+    transition: 0.3s all ease-in-out;
+}
+.container .rodape{
+    grid-area: rodape;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+}
+.container .rodape .botao-social{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    color: #ffffff;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    border: 1.5px solid #ffffff;
+    transition: 0.3s all ease-in-out;
+}
+
+.advice-update:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: #ffffff;
+}
+
+.container .rodape button:hover{
+    background: transparent;
+    color: hsl(300, 69%, 71%);
+    border: 1.5px solid hsl(300, 69%, 71%);
+}
+
+@media(max-width: 375px){
+    body{
+        background-color: hsl(257, 40%, 49%);
+    }
+    .container{
+        background-image: url('../image/bgmobile.svg');
+        background-size: contain;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .container .header .logo{
+        max-width: 140px;
+        padding: 0;
+        margin: 35px 30px 0;
+    }
+
+    .container .about{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .about .information{
+        align-items: center;
+        margin: 0;
+    }
+
+    .container .about .image{
+        display: flex;
+        max-width: 300px;
+        padding: 0;
+        margin-top: 45px;   
+    }
+    
+    .container .about .information .title{
+        margin-top: 60px;
+        font-size: 25px;
+        line-height: 40px;
+        max-width: 300px;
+        text-align: center; 
+    }
+    
+    .container .about .information .description{
+        width: 265px;
+        font-size: 14px;
+        line-height: 25px;
+        text-align: center;
+        margin: 15px;
+    }
+
+    .advice-update{
+        margin-top: 10px;
+        height: 35px;
+        width: 200px;
+        font-size: 14px;
+    }
+
+    .container .rodape{
+        justify-content: center;
+        margin: 0;
+    }
+
+    .container .rodape .botao-social{
+        margin: 50px 5px;
+        font-size: 15px;
+        height: 30px;
+        width: 30px;
+    }
+}
