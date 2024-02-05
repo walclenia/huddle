@@ -16,6 +16,6 @@ Google fonts and font awesome were used in this project.
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
+- Responsive CSS
 - Mobile-first workflow
 
